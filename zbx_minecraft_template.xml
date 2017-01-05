@@ -29,7 +29,7 @@
                     <snmp_community/>
                     <multiplier>0</multiplier>
                     <snmp_oid/>
-                    <key>minecraft.server.letency</key>
+                    <key>minecraft.server.latency</key>
                     <delay>120</delay>
                     <history>90</history>
                     <trends>365</trends>
