@@ -9,8 +9,8 @@ Zabbix template to Minecraft server
     3. Of course a properly installed Zabbix agent.
 
 ## Usage:
-    1. Copy the stats_mcserver.py in /usr/local/bin
-    2. Copy the Zabbix config file into /etc/zabbix/zabbix_agentd.d/
+    1. Copy the stats_mcserver.py in /usr/local/bin on the Minecraft server.
+    2. Copy the Zabbix config file into /etc/zabbix/zabbix_agentd.d/ on the Minecraft server.
     3. Restart the Zabbix Agent.
     4. Import the template XML file into your zabbix server and add to the correct host.
 
