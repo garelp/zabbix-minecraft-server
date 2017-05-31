@@ -177,7 +177,7 @@
                     <type>0</type>
                     <item>
                         <host>Template Minecraft Stats Active</host>
-                        <key>minecraft.server.letency</key>
+                        <key>minecraft.server.latency</key>
                     </item>
                 </graph_item>
             </graph_items>
