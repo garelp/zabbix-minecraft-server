@@ -1,10 +1,22 @@
 #!/usr/bin/python
 
 from mcstatus import MinecraftServer
+import sys
 
-# If you know the host and port, you may skip this and use MinecraftServer("example.org", 1234)
-server = MinecraftServer.lookup("localhost")
+###sys.argv[1] - check type
+###sys.argv[2] - ip address
+###sys.argv[3] - port
+
+# Get server instance
+server = MinecraftServer(sys.argv[2], int(sys.argv[3]))
 
 # 'status' is supported by all Minecraft servers that are version 1.7 or higher.
+# get server motd
 status = server.status()
-print("{0};{1}".format(status.players.online, status.latency))
+# parse 
+if sys.argv[1] == "getOnline":
+    print(status.players.online)
+elif sys.argv[1] == "getLatency":
+    print(status.latency)
+else:
+    print("{0};{1}".format(status.players.online, status.latency))
