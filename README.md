@@ -22,7 +22,7 @@ Zabbix template to Minecraft server
     3. Import the template XML file(zbx_minecraft_template.xml) into your zabbix server and add to the correct host, change minecraft server address and port in host macros.
 
     - `case 3` manual `stats_mcserver.py` using:
-    run `python stats_mcserver.py param1, param2, param3`
+    run `python stats_mcserver.py param1 param2 param3`
     where:
         param1(check type):
         parameter that we want to get
@@ -35,7 +35,7 @@ Zabbix template to Minecraft server
                 returns the number of players online and the response time in csv format, first the players, then the response time (e.g. 5;3.12)
 
         param2(ip address or dns)
-        param2(port)
+        param3(port)
 
 ## Note:
 This template was tested on zabbix 5.0, but you can try zbx_minecraft_template_zabbix3.2_nottested.xml for zabbix3.2 or older.
