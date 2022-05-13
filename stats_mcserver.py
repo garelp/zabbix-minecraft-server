@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-from mcstatus import MinecraftServer
+from mcstatus import JavaServer
 import sys
 
 ###sys.argv[1] - check type
@@ -8,7 +8,7 @@ import sys
 ###sys.argv[3] - port
 
 # Get server instance
-server = MinecraftServer(sys.argv[2], int(sys.argv[3]))
+server = JavaServer(sys.argv[2], int(sys.argv[3]))
 
 # 'status' is supported by all Minecraft servers that are version 1.7 or higher.
 # get server motd
