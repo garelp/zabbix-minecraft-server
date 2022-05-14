@@ -14,7 +14,7 @@ server = JavaServer(sys.argv[2], int(sys.argv[3]))
 # get server motd
 try:
     status = server.status()
-execpt:
+except:
     print(0)
     
 if status:
