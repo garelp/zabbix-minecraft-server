@@ -4,13 +4,11 @@
     <date>2022-05-14T12:45:33Z</date>
     <groups>
         <group>
-            <uuid>7df96b18c230490a9a0a9e2307226338</uuid>
             <name>Templates</name>
         </group>
     </groups>
     <templates>
         <template>
-            <uuid>133268d1bc004ae790411e288b829a27</uuid>
             <template>Template Minecraft Stats Active</template>
             <name>Template Minecraft Stats Active</name>
             <description>Minecraft server status</description>
@@ -21,7 +19,6 @@
             </groups>
             <items>
                 <item>
-                    <uuid>6465ed46060645e196188e895759e624</uuid>
                     <name>Server Latency</name>
                     <key>minecraft.server.latency[{$MINECRAFT.SERVER.IP},{$MINECRAFT.SERVER.PORT}]</key>
                     <delay>120</delay>
@@ -35,7 +32,6 @@
                     </tags>
                     <triggers>
                         <trigger>
-                            <uuid>a8dbe45a62ba45b7b83bfeead109d87d</uuid>
                             <expression>last(/Template Minecraft Stats Active/minecraft.server.latency[{$MINECRAFT.SERVER.IP},{$MINECRAFT.SERVER.PORT}])=0</expression>
                             <name>Minecraft Server down</name>
                             <priority>HIGH</priority>
@@ -43,7 +39,6 @@
                     </triggers>
                 </item>
                 <item>
-                    <uuid>3e9b76ae0cd4448a992724d9c7c0e60e</uuid>
                     <name>Server connected users</name>
                     <key>minecraft.server.users[{$MINECRAFT.SERVER.IP},{$MINECRAFT.SERVER.PORT}]</key>
                     <delay>120</delay>
@@ -71,7 +66,6 @@
     </templates>
     <graphs>
         <graph>
-            <uuid>7a3aaeba648a482e817bc3fb077e21d9</uuid>
             <name>Connected Users</name>
             <graph_items>
                 <graph_item>
@@ -84,7 +78,6 @@
             </graph_items>
         </graph>
         <graph>
-            <uuid>1f6a77772ca34718b724499b74e2bddb</uuid>
             <name>Server Latency</name>
             <graph_items>
                 <graph_item>
