@@ -1,5 +1,5 @@
 # zabbix-minecraft-server
-Zabbix template to Minecraft server
+Zabbix template for Minecraft server
 
 ## Requirements:
     1. pyton-pip: 
