@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
-    <version>6.0</version>
+    <version>5.0</version>
     <date>2022-05-14T12:45:33Z</date>
     <groups>
         <group>
@@ -17,6 +17,11 @@
                     <name>Templates</name>
                 </group>
             </groups>
+            <applications>
+                <application>
+                    <name>Minecraft</name>
+                </application>
+            </applications>	   
             <items>
                 <item>
                     <name>Server Latency</name>
@@ -24,12 +29,11 @@
                     <delay>120</delay>
                     <value_type>FLOAT</value_type>
                     <units>s</units>
-                    <tags>
-                        <tag>
-                            <tag>Application</tag>
-                            <value>Minecraft</value>
-                        </tag>
-                    </tags>
+                    <applications>
+                        <application>
+                            <name>Minecraft</name>
+                        </application>
+                    </applications>
                     <triggers>
                         <trigger>
                             <expression>last(/Minecraft Stats Active/minecraft.server.latency[{$MINECRAFT.SERVER.IP},{$MINECRAFT.SERVER.PORT}])=0</expression>
@@ -42,12 +46,11 @@
                     <name>Server connected users</name>
                     <key>minecraft.server.users[{$MINECRAFT.SERVER.IP},{$MINECRAFT.SERVER.PORT}]</key>
                     <delay>120</delay>
-                    <tags>
-                        <tag>
-                            <tag>Application</tag>
-                            <value>Minecraft</value>
-                        </tag>
-                    </tags>
+                    <applications>
+                        <application>
+                            <name>Minecraft</name>
+                        </application>
+                    </applications>
                 </item>
             </items>
             <macros>
