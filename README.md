@@ -3,7 +3,8 @@ Zabbix template to Minecraft server
 
 ## Requirements:
     1. pyton-pip: 
-        apt-get install python-pip
+        (DEB-Based) apt-get install python-pip
+        (RPM-Based) yum install python
     2. Python module to get info from Minecraft server: 
         pip install mcstatus
     3. Of course a properly installed Zabbix agent.
@@ -17,7 +18,7 @@ Zabbix template to Minecraft server
     3. Import the template XML file(zbx_minecraft_template.xml) into your zabbix server and add to the correct host, change minecraft server port in host macros.
 
     - `case 2` monitoring remote server:
-    1. Copy the Zabbix config file into /etc/zabbix/zabbix_agentd.d/ on the any server(e.g. local server).
+    1. Copy the Zabbix config file into /etc/zabbix/zabbix_agentd.d/ onto any server(e.g. local server).
     2. Restart the Zabbix Agent.
     3. Import the template XML file(zbx_minecraft_template.xml) into your zabbix server and add to the correct host, change minecraft server address and port in host macros.
 
