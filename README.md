@@ -4,7 +4,7 @@ Zabbix template for Minecraft server
 ## Requirements:
     1. pyton-pip: 
         (DEB-Based) apt-get install python-pip
-        (RPM-Based) yum install python
+        (RPM-Based) yum install python3
     2. Python module to get info from Minecraft server: 
         pip install mcstatus
     3. Of course a properly installed Zabbix agent.
