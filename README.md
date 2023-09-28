@@ -2,12 +2,18 @@
 Zabbix template for Minecraft server
 
 ## Requirements:
-    1. pyton-pip: 
+    1. Python's PIP: 
         (DEB-Based) apt-get install python-pip
         (RPM-Based) yum install python3
-    2. Python module to get info from Minecraft server: 
+        (RHEL 8+) dnf install python3
+    2. Access to "unversioned python" 
+        (DEB-Based) apt-get install python-is-python3
+        (RHEL-Based) alternatives --set python /usr/bin/python3
+    3. Python module to get info from Minecraft server: 
         pip install mcstatus
-    3. Of course a properly installed Zabbix agent.
+    4. Of course a properly installed Zabbix agent.
+
+For more information about unversioned python see: [minecraftparam.conf](minecraftparam.conf)
 
 ## Usage:
     0. Copy the stats_mcserver.py in /usr/local/bin on the Minecraft server.
