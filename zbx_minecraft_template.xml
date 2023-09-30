@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>5.0</version>
-    <date>2021-05-25T06:59:13Z</date>
+    <date>2022-05-14T12:45:33Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -9,8 +9,8 @@
     </groups>
     <templates>
         <template>
-            <template>Template Minecraft Stats Active</template>
-            <name>Template Minecraft Stats Active</name>
+            <template>Minecraft Stats Active</template>
+            <name>Minecraft Stats Active</name>
             <description>Minecraft server status</description>
             <groups>
                 <group>
@@ -21,7 +21,7 @@
                 <application>
                     <name>Minecraft</name>
                 </application>
-            </applications>
+            </applications>	   
             <items>
                 <item>
                     <name>Server Latency</name>
@@ -34,6 +34,13 @@
                             <name>Minecraft</name>
                         </application>
                     </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>last(/Minecraft Stats Active/minecraft.server.latency[{$MINECRAFT.SERVER.IP},{$MINECRAFT.SERVER.PORT}])=0</expression>
+                            <name>Minecraft Server down</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
                 </item>
                 <item>
                     <name>Server connected users</name>
@@ -50,12 +57,12 @@
                 <macro>
                     <macro>{$MINECRAFT.SERVER.IP}</macro>
                     <value>127.0.0.1</value>
-                    <description>Ip or dns name for checks. If you need a customize it, just override for need host.</description>
+                    <description>Ip or dns name for checks. If you have to change this, add this as a macro to your host.</description>
                 </macro>
                 <macro>
                     <macro>{$MINECRAFT.SERVER.PORT}</macro>
                     <value>25565</value>
-                    <description>Port for checks. If you need a customize it, just override for need host.</description>
+                    <description>The port used for checks. If you have to change this, add this as a macro to your host.</description>
                 </macro>
             </macros>
         </template>
@@ -67,7 +74,7 @@
                 <graph_item>
                     <color>1A7C11</color>
                     <item>
-                        <host>Template Minecraft Stats Active</host>
+                        <host>Minecraft Stats Active</host>
                         <key>minecraft.server.users[{$MINECRAFT.SERVER.IP},{$MINECRAFT.SERVER.PORT}]</key>
                     </item>
                 </graph_item>
@@ -79,7 +86,7 @@
                 <graph_item>
                     <color>CCCCFF</color>
                     <item>
-                        <host>Template Minecraft Stats Active</host>
+                        <host>Minecraft Stats Active</host>
                         <key>minecraft.server.latency[{$MINECRAFT.SERVER.IP},{$MINECRAFT.SERVER.PORT}]</key>
                     </item>
                 </graph_item>
